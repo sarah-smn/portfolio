@@ -1,0 +1,864 @@
+:root {
+    --dunkelblau: #201B75;
+}
+
+@font-face {
+    font-family: 'Josefin Sans', 'Helvetica Neue', Arial, sans-serif;
+    src: url('Material/fonts/JosefinSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Josefin Sans Bold', 'Helvetica Neue', Arial, sans-serif;
+    src: url('Material/fonts/JosefinSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pecita', 'Segoe Script', cursive;
+    src: url('Material/fonts/Pecita.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Reenie Beanie', 'Segoe Script', cursive;
+    src: url('Material/fonts/ReenieBeanie-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--dunkelblau);
+    position: relative;
+    background-color: darkgray;
+}
+
+nav {
+    font-family: 'Josefin Sans', 'Helvetica Neue', Arial, sans-serif;
+    color: var(--dunkelblau);
+    font-size: x-large;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em 8em 0.5em 2em;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 70px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: rgba(245, 245, 245, 0.4);
+}
+
+#hero h1 {
+    font-family: 'Pecita', 'Segoe Script', cursive;
+    font-size: 1500%;
+    color: var(--dunkelblau);
+    text-align: center;
+}
+
+#hero p {
+    font-family: 'Josefin Sans', 'Helvetica Neue', Arial, sans-serif;
+    color: var(--dunkelblau);
+    font-size: x-large;
+    text-align: left;
+    margin: -7em 10em 3em 10em;
+}
+
+#moinoracle {
+    margin-top: -1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#moinoracle img {
+    border-radius: 50%;
+    width: 500px;
+}
+
+#moinoracle h2 {
+    margin-top: -2em;
+    margin-left: 13em;
+    font-family: 'Reenie Beanie', 'Segoe Script', cursive;
+    font-size: 350%;
+    text-align: center;
+    rotate: -9deg;
+}
+
+h2 {
+    font-family: 'Pecita', 'Segoe Script', cursive;
+    font-size: 700%;
+    text-align: center;
+}
+
+.Overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Josefin Sans', 'Helvetica Neue', Arial, sans-serif;
+    color: var(--dunkelblau);
+    font-size: larger;
+    text-align: center;
+}
+
+.Overview h4 {
+    margin-top: -1em;
+    font-size: medium;
+}
+
+#projekte h5,
+#projekte p {
+    font-family: 'Josefin Sans', 'Helvetica Neue', Arial, sans-serif;
+    text-align: left;
+}
+
+#projekte h5 {
+    font-size: x-large;
+    margin: 0rem 10rem 1rem 7.8rem;
+}
+
+#projekte p {
+    font-size: large;
+    margin: 0rem 10rem 1rem 7.8rem;
+}
+
+.id img {
+    width: 100vw;
+    height: auto;
+    display: block;
+}
+
+.BilduText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+}
+
+.BilduText .Overview {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.BilduText img {
+    flex: 1 1 0;
+    max-width: 60%;
+    height: auto;
+    display: block;
+}
+
+.figmabutton {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    align-self: center;
+    background-color: rgba(245, 245, 245, 0.8);
+    border-radius: 50px;
+    padding: 0.6em 1.5em;
+    margin-top: 0.5em;
+}
+
+.figmabutton img {
+    width: 40px;
+}
+
+.figmabutton a {
+    font-family: 'Josefin Sans Bold', 'Helvetica Neue', Arial, sans-serif;
+    font-size: large;
+    text-decoration: none;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: whitesmoke;
+    padding: 60px 50px;
+    font-family: 'Josefin Sans', 'Helvetica Neue', Arial, sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#about h2 {
+    font-family: 'Pecita', 'Segoe Script', cursive;
+    font-size: 700%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: whitesmoke;
+}
+
+#about p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'Josefin Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: x-large;
+}
+
+#about p a {
+    color: whitesmoke;
+    text-decoration: underline;
+}
+
+#about ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+    display: inline-block;
+    text-align: left;
+}
+
+#about ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+#about ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: whitesmoke;
+}
+
+.but {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: rgba(245, 245, 245, 0.3);
+    color: whitesmoke;
+    padding: 18px 36px;
+    border-radius: 40px;
+    font-size: x-large;
+    margin-top: 40px;
+}
+
+.but svg {
+    width: 26px;
+    height: 26px;
+}
+
+.but a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#footer {
+    background-color: #1e2a4a;
+    padding: 80px;
+    text-align: center;
+}
+
+#footer a {
+    color: whitesmoke;
+    font-family: 'Josefin Sans', 'Helvetica Neue', Arial, sans-serif;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.wPro p {
+    color: var(--dunkelblau);
+    font-family: 'Josefin Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: large;
+    text-align: left;
+    max-width: 900px;
+    margin: 1em 0 2em 7.8rem;
+}
+#weiteres h2 {
+    color: whitesmoke;
+}
+
+#TINE a {
+    color: var(--dunkelblau);
+}
+
+#TINE {
+    text-align: left;
+    align-items: flex-start;
+    margin-left: 7.8rem;
+    color: whitesmoke;
+}
+#TINE + p {
+    color: whitesmoke;
+}
+
+#TINE h3 {
+    text-align: left;
+    margin: 0;
+}
+
+#TINE h4 {
+    text-align: left;
+    font-weight: normal;
+    margin: 0.3em 0 0.8em 0;
+}
+
+#TINE .figmabutton {
+    align-self: flex-start;
+    margin-left: 0;
+}
+
+#imge {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 2em;
+    margin-top: 2em;
+    margin-left: 7.8rem;
+}
+
+#imge img {
+    height: auto;
+    max-height: 500px;
+    width: auto;
+    max-width: 45%;
+    object-fit: contain;
+    flex-shrink: 1;
+}
+
+#imge img:nth-child(2) {
+    max-width: 55%;
+}
+
+#portfolioBuilder {
+    padding: 60px 7.8rem 80px 7.8rem;
+    text-align: right;
+}
+
+#portfolioBuilder #FD h3,
+#portfolioBuilder #FD h4,
+#portfolioBuilder p {
+    color: whitesmoke;
+}
+
+#portfolioBuilder #FD {
+    align-items: flex-end;
+}
+
+#portfolioBuilder p {
+    text-align: right;
+    margin: 1em 0 2em auto;
+    margin-right: 0;
+}
+
+.pbGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5em 2em;
+    margin-top: 2em;
+}
+
+.pbGrid img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 26px;
+    display: block;
+}
+
+.pbGrid img:nth-child(1) {
+    margin-top: 0;
+}
+
+.pbGrid img:nth-child(2) {
+    margin-top: 3em;
+}
+
+.pbGrid img:nth-child(3) {
+    margin-top: -1em;
+}
+
+.pbGrid img:nth-child(4) {
+    margin-top: 2em;
+}
+
+#chitchat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+    padding: 60px 7.8rem;
+}
+
+.ccText {
+    flex: 1;
+    text-align: left;
+}
+
+.ccText .Overview {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.ccText .Overview h3,
+.ccText .Overview h4 {
+    color: whitesmoke;
+}
+
+.ccText p {
+    margin: 1em 0 2em 0;
+    color: whitesmoke;
+    max-width: none;
+}
+
+#chitchat img {
+    flex: 1;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#foodSH, #pschnack {
+    max-width: 100%;
+    height: auto;
+}
+
+#bg-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -3;
+    pointer-events: none;
+    transition: background 0.15s linear;
+}
+
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+
+#scrollbar {
+    position: fixed;
+    top: 0;
+    right: 18px;
+    height: 100vh;
+    width: 40px;
+    z-index: 100;
+    pointer-events: none;
+}
+
+#scrollbar-track {
+    position: absolute;
+    top: 180px;
+    bottom: 60px;
+    left: 50%;
+    width: 5px;
+    background: rgba(245, 245, 245, 0.35);
+    transform: translateX(-50%);
+    border-radius: 4px;
+}
+
+#scrollbar-thumb {
+    position: absolute;
+    left: 50%;
+    top: 180px;
+    width: 38px;
+    height: 38px;
+    transform: translate(-50%, -50%);
+    background: rgba(245, 245, 245, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    transition: top 0.05s linear, background 0.4s ease;
+}
+
+#scrollbar-thumb svg {
+    width: 20px;
+    height: 20px;
+}
+
+#icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+#main {
+    padding-left: 8em;
+    padding-right: 8em;
+    box-sizing: border-box;
+}
+
+#foodsharing {
+    gap: 0.8em;
+    margin-top: 6em;
+}
+
+#foodsharing img {
+    max-width: 75%;
+    min-width: 0;
+}
+
+
+/* ============================================================
+   MOBILE / RESPONSIVE STYLES
+   ============================================================ */
+ 
+/* ---------- Tablet & small laptop (<=900px) ---------- */
+@media (max-width: 900px) {
+ 
+    #main {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+ 
+    nav {
+        margin: 1.2em 1.5em 0.5em 1.5em;
+    }
+ 
+    nav ul.nav-links {
+        gap: 30px;
+    }
+ 
+    nav .nav-logo img {
+        width: 90px;
+    }
+ 
+    #hero h1 {
+        font-size: 700%;
+    }
+ 
+    #hero p {
+        font-size: large;
+        margin: -3em 2em 2.5em 2em;
+    }
+ 
+    h2 {
+        font-size: 400%;
+    }
+ 
+    #moinoracle img {
+        width: 320px;
+    }
+ 
+    #moinoracle h2 {
+        margin-left: 6em;
+        font-size: 260%;
+    }
+ 
+    .BilduText {
+        flex-direction: column;
+        gap: 1em;
+    }
+ 
+    .BilduText .Overview,
+    .BilduText img {
+        max-width: 100%;
+        width: 100%;
+    }
+ 
+    #projekte h5,
+    #projekte p {
+        margin: 0 1.5em 1rem 1.5em;
+    }
+ 
+    .wPro p {
+        margin: 1em 1.5em 2em 1.5em;
+        max-width: 100%;
+    }
+ 
+    #TINE {
+        margin-left: 1.5em;
+    }
+ 
+    #imge {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        padding: 0 1.5em;
+        gap: 1.5em;
+    }
+ 
+    #imge img,
+    #imge img:nth-child(2) {
+        max-width: 100%;
+        max-height: none;
+        width: 100%;
+    }
+ 
+    #portfolioBuilder {
+        padding: 50px 1.5em 60px 1.5em;
+    }
+ 
+    .pbGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5em 1em;
+    }
+ 
+    .pbGrid img:nth-child(1),
+    .pbGrid img:nth-child(2),
+    .pbGrid img:nth-child(3),
+    .pbGrid img:nth-child(4) {
+        margin-top: 0;
+    }
+ 
+    #chitchat {
+        flex-direction: column;
+        padding: 50px 1.5em;
+        gap: 1.5em;
+    }
+ 
+    #chitchat img {
+        max-width: 100%;
+    }
+ 
+    #about {
+        padding: 50px 1.5em;
+        max-width: 100%;
+    }
+ 
+    #about h2 {
+        font-size: 400%;
+    }
+ 
+    #about p {
+        font-size: large;
+    }
+ 
+    #foodsharing img {
+        max-width: 100%;
+    }
+ 
+    #scrollbar {
+        right: 8px;
+        width: 30px;
+    }
+ 
+    #scrollbar-thumb {
+        width: 30px;
+        height: 30px;
+    }
+}
+ 
+/* mobil */
+ 
+@media (max-width: 600px) {
+ 
+    #main {
+        padding-left: 1.2em;
+        padding-right: 1.2em;
+    }
+ 
+    nav {
+        margin: 1em 1em 0.5em 1em;
+        flex-wrap: wrap;
+    }
+ 
+    nav ul.nav-links {
+        gap: 18px;
+        font-size: medium;
+    }
+ 
+    nav .nav-logo img {
+        width: 70px;
+    }
+ #hero{
+    padding-top: 3em;
+ }
+    #hero h1 {
+        font-size: 500%;
+    }
+ 
+    #hero p {
+        font-size: medium;
+        margin: -2em 1em 2em 1em;
+    }
+ 
+    h2 {
+        font-size: 280%;
+    }
+ 
+    #moinoracle {
+        margin-top: 0;
+    }
+ 
+    #moinoracle img {
+        width: 220px;
+    }
+ 
+    #moinoracle h2 {
+        margin-left: 0;
+        margin-top: 1.2em;
+        font-size: 200%;
+        rotate: -6deg;
+    }
+ 
+    .Overview {
+        font-size: medium;
+    }
+ 
+    .BilduText {
+        flex-direction: column;
+        gap: 1em;
+    }
+ 
+    .BilduText .Overview,
+    .BilduText img {
+        max-width: 100%;
+        width: 100%;
+    }
+ 
+    #projekte h5 {
+        font-size: large;
+        margin: 0 0.5em 0.8rem 0.5em;
+    }
+ 
+    #projekte p {
+        font-size: medium;
+        margin: 0 0.5em 1rem 0.5em;
+    }
+ 
+    .figmabutton {
+        padding: 0.5em 1em;
+    }
+ 
+    .figmabutton img {
+        width: 28px;
+    }
+ 
+    .figmabutton a {
+        font-size: medium;
+    }
+ 
+    .wPro p {
+        font-size: medium;
+        margin: 1em 0.5em 2em 0.5em;
+        max-width: 100%;
+    }
+ 
+    #TINE {
+        margin-left: 0.5em;
+    }
+ 
+    #imge {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        padding: 0 0.5em;
+        gap: 1.5em;
+    }
+ 
+    #imge img,
+    #imge img:nth-child(2) {
+        max-width: 100%;
+        max-height: none;
+        width: 100%;
+    }
+ 
+    #portfolioBuilder {
+        padding: 40px 0.5em 50px 0.5em;
+        text-align: center;
+    }
+ 
+    #portfolioBuilder #FD {
+        align-items: center;
+    }
+ 
+    #portfolioBuilder p {
+        text-align: center;
+        margin: 1em auto 2em auto;
+    }
+ 
+    .pbGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+ 
+    .pbGrid img:nth-child(1),
+    .pbGrid img:nth-child(2),
+    .pbGrid img:nth-child(3),
+    .pbGrid img:nth-child(4) {
+        margin-top: 0;
+    }
+ 
+    #chitchat {
+        flex-direction: column;
+        padding: 40px 0.5em;
+        gap: 1.5em;
+    }
+ 
+    #chitchat img {
+        max-width: 100%;
+    }
+ 
+    .ccText .Overview {
+        align-items: center;
+        text-align: center;
+    }
+ 
+    #about {
+        padding: 50px 1em;
+        max-width: 100%;
+    }
+ 
+    #about h2 {
+        font-size: 280%;
+    }
+ 
+    #about p {
+        font-size: medium;
+    }
+ 
+    .but {
+        padding: 14px 24px;
+        font-size: large;
+        text-align: center;
+    }
+ 
+    #foodsharing img {
+        max-width: 100%;
+    }
+ 
+    #footer {
+        padding: 40px 20px;
+    }
+ 
+    #scrollbar {
+        display: none;
+    }
+}
+ 

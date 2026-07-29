@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moinoracle</title>
+    <link rel="stylesheet" href="moinoracle.css">
+</head>
+
+<body>
+    <div id="alles">
+    
+        <video autoplay muted loop playsinline >
+        <source src="Material/background.mp4" type="video/mp4">
+    </video>
+    
+    <div id="back">
+        <a href="index.html" class="back-link">
+          <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M21 11H6.83l3.58-3.59L9 6l-6 6l6 6l1.41-1.41L6.83 13H21z" />
+    </svg>
+          Zurück zum Portfolio
+        </a>
+        </div>
+    <div id="center">
+    
+        <div id="bildUtitle">
+            <img src="Material/moinoracle.png" id="moewe" alt="Sketch Möwe">
+    
+            <div class="titel-und-inhalt">
+                <h1 class="haupttitel">MOINORACLE</h1>
+    
+                <div id="start" class="moinoracle">
+                    <p>
+                        Das Moinoracle wird mit nur 3 kurzen Fragen beantworten, ob wir ein
+                        gutes Match sind.
+                        Das Oracle sollte dabei nicht länger als 1 Minute brauchen.
+                    </p>
+                    <button>START</button>
+                </div>
+    
+                <div id="q1" class="moinoracle">
+                    <p>Wir suchen jemanden, der bereits sehr viel praktische Erfahrung hat?</p>
+                    <button class="ja" data-match="false">Ja</button>
+                    <button class="nein" data-match="true">Nein</button>
+                </div>
+    
+                <div id="q2" class="moinoracle">
+                    <p>Wir suchen jemanden, der Spaß am Design-Bereich und an Figma hat?</p>
+                    <button class="ja" data-match="true">Ja</button>
+                    <button class="nein" data-match="false">Nein</button>
+                </div>
+    
+                <div id="q3" class="moinoracle">
+                    <p>Wir suchen jemanden, der auch gerne im Team arbeitet?</p>
+                    <button class="ja" data-match="true">Ja</button>
+                    <button class="nein" data-match="false">Nein</button>
+                </div>
+    
+                <div id="match" class="result">
+                    <h1>IT'S A MATCH !</h1>
+                    <p>
+                        Sieht aus, als würde es gut passen. Schau dir doch gerne mein
+                        Portfolio an :)
+                    </p>
+                    <a href="index.html">Portfolio</a>
+                    <a href="mailto:sarahsimon2501@gmail.com">E-Mail</a>
+                </div>
+    
+                <div id="no_match" class="result">
+                    <h1>NO MATCH !</h1>
+                    <p>
+                        Sieht aus, als passen wir nicht zusammen.<br><br>
+                        Ich hoffe, ich konnte dir aber trotzdem etwas Spaß bereiten und auch Zeit ersparen.
+                        <br><br>Du kannst dir natürlich trotzdem mein Portfolio weiter anschauen.
+                    </p>
+                    <a href="index.html">Portfolio</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="cent">
+        <div class="loading">
+             <img src="Material/moinoracle.png" alt="Moinoracle" class="loadingimg" width="40px">
+         <div class="loadingbar"></div>
+        </div>
+</div>
+</div>
+  <script src="moinoracle.js"></script>  
+</body>
+</html>

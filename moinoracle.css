@@ -1,0 +1,356 @@
+:root {
+    --dunkelblau: #201B75;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('Material/fonts/JosefinSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Josefin Sans Bold';
+    src: url('Material/fonts/JosefinSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pecita';
+    src: url('Material/fonts/Pecita.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Reenie Beanie';
+    src: url('Material/fonts/ReenieBeanie-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    color: var(--dunkelblau);
+    padding: 20px;
+
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+h1 {
+    font-family: 'Reenie Beanie';
+    font-size: 800%;
+    margin-top: -1rem;
+    margin-bottom: 0;
+}
+
+
+#bildUtitle {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    margin-left: 14vw;
+}
+
+.titel-und-inhalt {
+    display: flex;
+    flex-direction: column;
+    width: min(920px, 90vw);
+}
+
+#moewe {
+    border-radius: 50%;
+    border-color: var(--dunkelblau);
+    border: solid 5px var(--dunkelblau);
+    width: 300px;
+    height: 300px;
+}
+
+#back {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+#icon {
+    width: 35px;
+    height: 35px;
+    color: var(--dunkelblau);
+}
+
+.back-link {
+    font-family: 'Josefin Sans Bold';
+    text-decoration: none;
+    color: var(--dunkelblau);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: x-large;
+    background: none;
+}
+
+.back-link:visited {
+    color: var(--dunkelblau);
+}
+
+p {
+    font-family: 'Josefin Sans';
+    font-size: large;
+
+}
+
+
+.moinoracle {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: auto auto;
+    gap: 16px;
+    align-items: start;
+}
+
+.moinoracle p {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    max-width: 60ch;
+}
+
+.moinoracle .ja {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.moinoracle .nein {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#start {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+button {
+    font-family: 'Josefin Sans Bold';
+    font-size: large;
+    color: whitesmoke;
+    background-color: var(--dunkelblau);
+    padding: 15px 50px;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nein {
+    background-color: transparent;
+    border: 2px solid var(--dunkelblau);
+    color: var(--dunkelblau);
+}
+
+a {
+    font-family: 'Josefin Sans Bold';
+    font-size: large;
+    color: whitesmoke;
+    background-color: var(--dunkelblau);
+    padding: 15px 50px;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.moinoracle,
+.result,
+.loading {
+    display: none;
+}
+
+#start {
+    display: grid;
+}
+
+#center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.result {
+    display: none;
+    grid-template-columns: repeat(2, max-content);
+    gap: 16px;
+    align-items: start;
+    z-index: 2;
+}
+
+.result h1,
+.result p {
+    grid-column: 1 / -1;
+    max-width: 60ch;
+}
+
+.result a:nth-of-type(1) {
+    grid-column: 1;
+}
+
+.result a:nth-of-type(2) {
+    grid-column: 2;
+}
+
+#cent {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    pointer-events: none;
+
+}
+
+.loading {
+    height: 30px;
+    width: 70%;
+    background-color: transparent;
+    border: 2px solid var(--dunkelblau);
+    color: var(--dunkelblau);
+    position: relative;
+    border-radius: 30px;
+    overflow: visible;
+    top: 0;
+    left: 0;
+
+}
+
+.loading .loadingbar {
+    height: 100%;
+    background-color: var(--dunkelblau);
+    position: absolute;
+    border-radius: 30px;
+    animation: progressAnimation 6s;
+}
+
+.loading .loadingimg {
+    position: absolute;
+    border-radius: 50px;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: moveAndSpin 6s;
+    z-index: 2;
+}
+
+@keyframes progressAnimation {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes moveAndSpin {
+    0% {
+        left: 0;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        left: 100%;
+        transform: translate(-50%, -50%) rotate(1080deg);
+    }
+}
+
+
+@media (max-width: 1120px) {
+    #bildUtitle {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+        gap: 16px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 350%;
+        margin-top: 0;
+    }
+
+    #moewe {
+        width: 140px;
+        height: 140px;
+        border-width: 3px;
+    }
+
+    .titel-und-inhalt {
+        width: 92vw;
+        align-items: center;
+    }
+
+    p {
+        font-size: 16px;
+        max-width: 90vw;
+    }
+
+    button,
+    a {
+        padding: 10px 28px;
+        font-size: 16px;
+    }
+
+    .moinoracle {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        justify-items: center;
+        gap: 12px;
+    }
+
+    .moinoracle p {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .moinoracle .ja {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .moinoracle .nein {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .result {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .result a:nth-of-type(1),
+    .result a:nth-of-type(2) {
+        grid-column: 1;
+    }
+
+    .loading {
+        width: 85%;
+    }
+}
